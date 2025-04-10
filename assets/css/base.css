@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Base styles - Các style cơ bản */
+/* Variables */
+:root {
+  --dark-bg: #111111;
+  --light-text: rgba(255, 255, 255, 0.7);
+  --primary-color: #ffc107;
+  --white: #fff;
+  --black: #000;
+  --gray: #757575;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #111111;
+  color: var(--light-text);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility classes */
+.text-light-50 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 950px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .section-one h1 {
+    font-size: 3.5rem;
+  }
+
+  .swiper-slide {
+    width: 600px !important;
+  }
+
+  .swiper-slide img {
+    height: 338px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-one .content {
+    padding: 0 30px;
+  }
+
+  .section-one h1 {
+    font-size: 2.5rem;
+  }
+
+  .movie-nav {
+    padding: 0 30px;
+    gap: 15px;
+  }
+
+  .swiper-slide {
+    width: 400px !important;
+  }
+
+  .swiper-slide img {
+    height: 225px;
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-slide {
+    width: 400px !important;
+  }
+  .swiper-slide img {
+    height: 225px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+}

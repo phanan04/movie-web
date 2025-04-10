@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phim - NEW MOVIE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/movie.css" />
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fw-bold text-warning" href="index.html">
+          NEW <span class="text-white">MOVIE</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav main-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="movie.html">Phim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Thể Loại</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mylist.html">Danh sách của tôi</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html"
+                ><i class="fas fa-user"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Movie Filter Section -->
+    <section class="movie-filter">
+      <div class="filter-row">
+        <select class="filter-select">
+          <option value="" disabled selected>Sắp xếp</option>
+          <option value="newest">Mới nhất</option>
+          <option value="popular">Phổ biến nhất</option>
+          <option value="rating">Đánh giá cao</option>
+        </select>
+
+        <select class="filter-select">
+          <option value="" disabled selected>Định dạng</option>
+          <option value="movie">Phim lẻ</option>
+          <option value="series">Phim bộ</option>
+          <option value="anime">Hoạt hình</option>
+        </select>
+
+        <select class="filter-select">
+          <option value="" disabled selected>Thể loại</option>
+          <option value="action">Hành động</option>
+          <option value="comedy">Hài hước</option>
+          <option value="drama">Chính kịch</option>
+          <option value="horror">Kinh dị</option>
+          <option value="romance">Tình cảm</option>
+        </select>
+
+        <select class="filter-select">
+          <option value="" disabled selected>Quốc gia</option>
+          <option value="us">Âu - Mỹ</option>
+          <option value="korea">Hàn Quốc</option>
+          <option value="china">Trung Quốc</option>
+          <option value="japan">Nhật Bản</option>
+          <option value="vietnam">Việt Nam</option>
+        </select>
+
+        <select class="filter-select">
+          <option value="" disabled selected>Năm</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+        </select>
+
+        <button class="filter-button">Lọc phim</button>
+      </div>
+    </section>
+
+    <!-- Movie List Section -->
+    <section class="movie-list">
+      <h2>Danh sách Phim mới</h2>
+      <div class="movie-grid">
+        <!-- Movie Card 1 -->
+        <div class="movie-card">
+          <img src="../assets/images/ss1.webp" alt="Movie 1" />
+          <div class="movie-info">
+            <h3 class="movie-title">Kẻ đồng hành</h3>
+            <div class="movie-meta">2024 • 1 giờ 50 phút</div>
+          </div>
+        </div>
+
+        <!-- Movie Card 2 -->
+        <div class="movie-card">
+          <img src="../assets/images/ss2.webp" alt="Movie 2" />
+          <div class="movie-info">
+            <h3 class="movie-title">Smile</h3>
+            <div class="movie-meta">2024 • 1 giờ 45 phút</div>
+          </div>
+        </div>
+
+        <!-- Movie Card 3 -->
+        <div class="movie-card">
+          <img src="../assets/images/ss7.webp" alt="Movie 3" />
+          <div class="movie-info">
+            <h3 class="movie-title">Điềm báo của quỷ</h3>
+            <div class="movie-meta">2024 • 2 giờ 10 phút</div>
+          </div>
+        </div>
+
+        <!-- Movie Card 4 -->
+        <div class="movie-card">
+          <img src="../assets/images/ss4.webp" alt="Movie 4" />
+          <div class="movie-info">
+            <h3 class="movie-title">Joker</h3>
+            <div class="movie-meta">2024 • 1 giờ 55 phút</div>
+          </div>
+        </div>
+
+        <!-- Movie Card 5 -->
+        <div class="movie-card">
+          <img src="../assets/images/ss5.jpg" alt="Movie 5" />
+          <div class="movie-info">
+            <h3 class="movie-title">Alien</h3>
+            <div class="movie-meta">2024 • 1 giờ 40 phút</div>
+          </div>
+        </div>
+
+        <!-- Movie Card 6 -->
+        <div class="movie-card">
+          <img src="../assets/images/ss6.webp" alt="Movie 6" />
+          <div class="movie-info">
+            <h3 class="movie-title">Deadpool & Wolverine</h3>
+            <div class="movie-meta">2024 • 2 giờ 5 phút</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập - NEW MOVIE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+  </head>
+  <body>
+    <div class="overlay">
+      <header class="login-header">
+        <a href="index.html" class="login-logo"> NEW <span>MOVIE</span> </a>
+      </header>
+
+      <main>
+        <div class="login-container">
+          <div class="login-form">
+            <h1>Đăng nhập</h1>
+            <form>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email hoặc số điện thoại"
+              />
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Mật khẩu"
+              />
+              <button type="submit" class="btn btn-login">Đăng nhập</button>
+
+              <div class="remember-forgot">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="remember"
+                  />
+                  <label class="form-check-label" for="remember"
+                    >Ghi nhớ đăng nhập</label
+                  >
+                </div>
+                <a href="#" class="forgot-password">Quên mật khẩu?</a>
+              </div>
+
+              <div class="signup-now">
+                Bạn chưa có tài khoản?
+                <a href="register.html">Đăng ký ngay</a>
+              </div>
+
+              <div class="recaptcha-terms">
+                Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải
+                là robot.
+                <a href="#">Tìm hiểu thêm</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phim Spider Man</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fw-bold text-warning" href="#">
+          NEW <span class="text-white">MOVIE</span>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav main-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="movie.html">Phim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Thể Loại</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mylist.html">Danh sách của tôi</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html"><i class="fas fa-user"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content auth-form">
+          <div class="modal-header border-0">
+            <h1>Đăng nhập</h1>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="email">Email hoặc số điện thoại</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Nhập email hoặc số điện thoại"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Nhập mật khẩu"
+                />
+              </div>
+
+              <div class="form-check">
+                <div>
+                  <input type="checkbox" id="remember" />
+                  <label for="remember">Ghi nhớ đăng nhập</label>
+                </div>
+                <a href="#">Quên mật khẩu?</a>
+              </div>
+
+              <button type="submit" class="btn-submit">Đăng nhập</button>
+
+              <div class="auth-footer">
+                Bạn chưa có tài khoản?
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#registerModal"
+                  data-bs-dismiss="modal"
+                  >Đăng ký ngay</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content auth-form">
+          <div class="modal-header border-0">
+            <h1>Đăng ký</h1>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="reg-fullname">Họ và tên</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="reg-fullname"
+                  placeholder="Nhập họ và tên"
+                />
+              </div>
+              <div class="form-group">
+                <label for="reg-email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="reg-email"
+                  placeholder="Nhập địa chỉ email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="reg-phone">Số điện thoại</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="reg-phone"
+                  placeholder="Nhập số điện thoại"
+                />
+              </div>
+              <div class="form-group">
+                <label for="reg-password">Mật khẩu</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="reg-password"
+                  placeholder="Nhập mật khẩu"
+                />
+              </div>
+              <div class="form-group">
+                <label for="reg-confirm-password">Xác nhận mật khẩu</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="reg-confirm-password"
+                  placeholder="Nhập lại mật khẩu"
+                />
+              </div>
+              <div class="form-check">
+                <div>
+                  <input type="checkbox" id="reg-terms" />
+                  <label for="reg-terms"
+                    >Tôi đồng ý với điều khoản sử dụng</label
+                  >
+                </div>
+              </div>
+              <button type="submit" class="btn-submit">Đăng ký</button>
+
+              <div class="auth-footer">
+                Đã có tài khoản?
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                  data-bs-dismiss="modal"
+                  >Đăng nhập ngay</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie Banner Section -->
+    <section class="movie-banner">
+      <div class="movie-slider">
+        <div
+          class="movie-content active"
+          style="background-image: url('../assets/images/venom-bg.webp')"
+        >
+          <h1>Venom<br />The Last Dance</h1>
+          <div class="movie-meta">
+            <span class="year">2024</span>
+            <span class="duration">1 hour 50 minutes</span>
+            <span class="badge">Sci-Fi 6.0 IMDb</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <div class="movie-buttons">
+            <button class="btn btn-light btn-play">
+              <i class="fas fa-play"></i>Xem ngay
+            </button>
+            <button class="btn btn-secondary btn-trailer">
+              <i class="fas fa-info-circle"></i>Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="movie-content"
+          style="background-image: url('../assets/images/movie-02.jpg')"
+        >
+          <h1>Interstellar</h1>
+          <div class="movie-meta">
+            <span class="year">2014</span>
+            <span class="duration">2 hour 49 minutes</span>
+            <span class="badge">Sci-Fi 8.7 IMDb</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <div class="movie-buttons">
+            <button class="btn btn-light btn-play">
+              <i class="fas fa-play"></i>Xem ngay
+            </button>
+            <button class="btn btn-secondary btn-trailer">
+              <i class="fas fa-info-circle"></i>Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="movie-content"
+          style="background-image: url('../assets/images/movie-03.jpg')"
+        >
+          <h1>Spider-Man<br />No Way Home</h1>
+          <div class="movie-meta">
+            <span class="year">2021</span>
+            <span class="duration">2 hour 28 minutes</span>
+            <span class="badge">Action 8.3 IMDb</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <div class="movie-buttons">
+            <button class="btn btn-light btn-play">
+              <i class="fas fa-play"></i>Xem ngay
+            </button>
+            <button class="btn btn-secondary btn-trailer">
+              <i class="fas fa-info-circle"></i>Xem chi tiết
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- Movie Sections -->
+    <section class="movie-poster-slider">
+      <h2>THỊNH HÀNH</h2>
+      <div class="container-fluid">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/anime-01.webp" alt="Movie 1" />
+              <div class="episode-badge">TẬP MỚI</div>
+              <div class="update-badge">MỖI TUẦN</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/anime-02.webp" alt="Movie 2" />
+              <div class="episode-badge">TẬP MỚI</div>
+              <div class="update-badge">MỖI TUẦN</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/anime-03.webp" alt="Movie 3" />
+              <div class="episode-badge">TẬP MỚI</div>
+              <div class="update-badge">MỖI TUẦN</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/anime-04.webp" alt="Movie 4" />
+              <div class="episode-badge">TẬP MỚI</div>
+              <div class="update-badge">MỖI TUẦN</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/anime-05.webp" alt="Movie 5" />
+              <div class="episode-badge">TẬP MỚI</div>
+              <div class="update-badge">MỖI TUẦN</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/anime-06.webp" alt="Movie 6" />
+              <div class="episode-badge">TẬP MỚI</div>
+              <div class="update-badge">MỖI TUẦN</div>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="movie-poster-slider">
+      <h2>MỚI NHẤT</h2>
+      <div class="container-fluid">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/images/new-01.jpg" alt="Movie 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/new-02.webp" alt="Movie 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/new-03.webp" alt="Movie 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/new-04.webp" alt="Movie 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/new-05.webp" alt="Movie 5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/new-06.webp" alt="Movie 6" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="movie-poster-slider">
+      <h2>PHIM BỘ HÀN QUỐC</h2>
+      <div class="container-fluid">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/hq-01.webp" alt="Movie 1" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/hq-02.webp" alt="Movie 2" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/hq-03.webp" alt="Movie 3" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/hq-04.webp" alt="Movie 4" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/hq-05.webp" alt="Movie 5" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/hq-06.webp" alt="Movie 6" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/hq-07.webp" alt="Movie 7" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="movie-poster-slider">
+      <h2>PHIM ÂU MỸ HAY NHẤT</h2>
+      <div class="container-fluid">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/A-01.webp" alt="Movie 1" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/A-02.webp" alt="Movie 2" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/A-03.webp" alt="Movie 3" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/A-04.webp" alt="Movie 4" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/A-05.webp" alt="Movie 5" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/A-06.webp" alt="Movie 6" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="movie-poster-slider">
+      <h2>PHIM BỘ TRUNG QUỐC</h2>
+      <div class="container-fluid">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/TQ-01.webp" alt="Movie 1" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/TQ-02.webp" alt="Movie 2" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/TQ-03.webp" alt="Movie 3" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/TQ-04.webp" alt="Movie 4" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/TQ-05.webp" alt="Movie 5" />
+            </div>
+            <div class="swiper-slide">
+              <div class="top-badge">TOP 10</div>
+              <img src="../assets/images/TQ-06.webp" alt="Movie 6" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-12 mb-4">
+            <a class="footer-brand" href="#"> NEW <span>MOVIE</span> </a>
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i>
+              Movie Web Việt Nam
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <h5>KHÁM PHÁ</h5>
+            <ul class="footer-links">
+              <li><a href="#">Trung tâm hỗ trợ</a></li>
+              <li><a href="#">Tài khoản</a></li>
+              <li><a href="#">Cách xem</a></li>
+              <li><a href="#">Chỉ có tại NEW MOVIE</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <h5>PHÁP LÝ</h5>
+            <ul class="footer-links">
+              <li><a href="#">Điều khoản sử dụng</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Cookie</a></li>
+              <li><a href="#">Thông tin doanh nghiệp</a></li>
+              <li><a href="#">Thông báo pháp lý</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 mb-4">
+            <h5>HỖ TRỢ</h5>
+            <ul class="footer-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Kiểm tra tốc độ</a></li>
+              <li><a href="#">Liên hệ</a></li>
+              <li><a href="#">Trung tâm đa phương tiện</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="language-select">
+          <select class="form-select">
+            <option value="vi">Tiếng Việt</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
